@@ -25,14 +25,18 @@ def punch_the_clock(url: str, user: str, password: str) -> str:
     date: str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     sleep(2)
     driver.close()
-    return f'{page_title}\n{page_result}: {date}'
+    return f'{page_title}\n{page_result} - {date}'
 
 
 def main():
-    url: str = 'https://test.com'
-    user: str = 'admin'
-    password: str = '123456'
-    print(punch_the_clock(url, user, password))
+    try:
+        url: str = 'https://www.hitpoint.co.jp/'
+        user: str = 'admin'
+        password: str = 'admin'
+        with open('logs.txt', 'w') as logs:
+            logs.write(punch_the_clock(url, user, password))
+    except KeyboardInterrupt:
+        print('\nBye!')
 
 
 if '__main__' == __name__:
