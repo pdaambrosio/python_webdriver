@@ -132,4 +132,4 @@ dmypy.json
 .idea
 
 # logs
-log.txt
+logs.txt
