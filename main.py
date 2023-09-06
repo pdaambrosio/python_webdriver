@@ -13,7 +13,7 @@ def main():
     error.logs file.
     """
     try:
-        url: str = 'https://cliente.apdata.com.br/everisparceiro/'
+        url: str = 'https://url.com'
         user: str = os.getenv('WEB_USER')
         password: str = os.getenv('WEB_PASSWORD')
         with open(pathlib.Path().resolve()/'access.logs', 'a+') as access:
