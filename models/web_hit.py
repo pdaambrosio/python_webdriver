@@ -1,3 +1,4 @@
+#!/home/kali-user/courses_projects/scripts/python_envs/web_hit_point/bin/python3
 from datetime import datetime
 from time import sleep
 from selenium import webdriver
@@ -35,7 +36,7 @@ def punch_the_clock(url: str, user: str, password: str) -> str:
     
     driver.get(url)
     sleep(3)
-    driver.find_element(By.ID, 'button-1020').click()
+    driver.find_element(By.ID, 'button-1020-btnInnerEl').click()
     sleep(1)
     driver.find_element(By.ID, 'ext-135').send_keys(user)
     driver.find_element(By.ID, 'ext-137').send_keys(password)
